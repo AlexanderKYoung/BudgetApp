@@ -1,21 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { COLORS, icons, images, SIZES } from "./constants/constants";
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { COLORS, icons, images, SIZES, GlobalStyles } from "./constants/constants";
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={[styles.container, GlobalStyles.droidSafeArea]}>
       <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: COLORS.white,
   },
 });
